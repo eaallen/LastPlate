@@ -1,0 +1,88 @@
+﻿@model IEnumerable<TheLastPlate2.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Instructions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Street)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.State)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Zip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Posted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Key_Words)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Business_ID)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Instructions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Street)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Zip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date_Posted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Key_Words)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Business_ID)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Product_ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Product_ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Product_ID })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,94 @@
+﻿@model IEnumerable<TheLastPlate2.Models.Listing>
+
+@{
+                /**/
+
+                ViewBag.Title = "Index";
+}
+
+<h2>Food about to go!!!</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+
+
+@foreach (var item in Model)
+{
+     
+<div class="row">
+    <div class="col-md-6">
+        @if (item.Product_ID % 2 == 0)
+        {                                 
+            <div class="text-center">
+                <img id="img" class="img-rounded" src="~/Content/Images/@(item.Product_ID).png " alt="Error" style="height:100px; width:100px;"/>
+                <br />
+                <p>
+                    @Html.DisplayFor(modelItem => item.Product.Description)
+                </p>
+
+                <p>
+                    End Date:  @Html.DisplayFor(modelItem => item.End_Date)
+                </p>
+
+                <p>
+                    Quantity left: @Html.DisplayFor(modelItem => item.Product_Quantity)
+                </p>
+
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Listing_ID }) |
+                    @Html.ActionLink("Purchase", "Details", new { id = item.Listing_ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Listing_ID })
+                </p>
+            </div>
+            <br /> <br /> <br />
+
+        }
+    </div>
+    
+    <div class="col-md-6">
+        @if (item.Product_ID % 2 == 1)
+        {
+            <div class="text-center">
+                <img id="img" class="img-rounded" src="~/Content/Images/@(item.Product_ID).png " alt="Error" style="height:100px; width:100px;" />
+                <br />
+                <p>
+                    @Html.DisplayFor(modelItem => item.Product.Description)
+                </p>
+
+                <p>
+                    End Date:  @Html.DisplayFor(modelItem => item.End_Date)
+                </p>
+
+                <p>
+                    Quantity left: @Html.DisplayFor(modelItem => item.Product_Quantity)
+                </p>
+
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Listing_ID }) |
+                    @Html.ActionLink("Purchase", "Details", new { id = item.Listing_ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Listing_ID })
+                </p>
+            </div>
+
+
+
+
+
+
+
+            <br /> <br /> <br />
+        }
+        </div>
+
+</div>
+}
+
+<script>
+
+
+</script>
+
+

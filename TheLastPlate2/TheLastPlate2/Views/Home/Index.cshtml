@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@Styles.Render("~/Content/Styles/StyleSheet1.css")
+<head>
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css" />
+
+</head>
+
+<div class="jumbotron">
+    <div class="text-center modal-title">
+        <h1 style="color: black">The Last Plate</h1> <br /><br /><br /><br />
+        <p class="lead"></p>
+        <p><a href="@Url.Action("Index","Listings")" class="btn btn-danger btn-lg">Food near me &raquo;</a></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Create an Account</h2>
+        <p>
+            Sign up to get important alerts for great deals on food right before it gets tossed! 
+        </p>
+        <p><a class="btn btn-warning" href="@Url.Action("Create","Customers")">Sign up &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Wanna Partner?</h2>
+        <p>Click on the button to learn how busnisses can partner with The Last Plate to increase profits.</p>
+        <p><a class="btn btn-warning" href="@Url.Action("Create","Businesses")">Become a partner &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Join our Club</h2>
+        <p>Become a VIP memeber to get special discounts with our VIP OnTrack&copy; system.</p>
+        <p><a class="btn btn-warning" href="https://thelastplate.com">Learn more &raquo;</a></p>
+    </div>
+</div>

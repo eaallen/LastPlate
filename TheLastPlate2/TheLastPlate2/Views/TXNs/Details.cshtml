@@ -1,0 +1,58 @@
+﻿@model TheLastPlate2.Models.TXN
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TXN</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.Cust_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.Cust_Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Listing.Listing_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Listing.Listing_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Purchased_Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Purchased_Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total_Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total_Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_of_Transaction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_of_Transaction)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TXN_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

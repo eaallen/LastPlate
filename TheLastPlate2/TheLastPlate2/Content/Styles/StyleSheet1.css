@@ -1,0 +1,15 @@
+﻿
+.jumbotron {
+    background-image: url(../Images/berries-are-good-food-for-high-blood-pressure.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 0;
+   
+}
+.transbox h1 {
+    color: black;
+    z-index: 2;
+    border: 2px dashed black;
+    font-weight: bold;
+    
+}

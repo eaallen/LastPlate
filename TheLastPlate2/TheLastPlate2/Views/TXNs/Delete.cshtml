@@ -1,0 +1,64 @@
+﻿@model TheLastPlate2.Models.TXN
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TXN</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.Cust_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.Cust_Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Listing.Listing_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Listing.Listing_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Purchased_Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Purchased_Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total_Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total_Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_of_Transaction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_of_Transaction)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
